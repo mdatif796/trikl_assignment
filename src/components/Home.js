@@ -2,9 +2,7 @@ import { useEffect, useState } from "react";
 import DraggableAndEditableHeading from "./DraggableAndEditableHeading";
 
 const Home = () => {
-  const [img, setImg] = useState(
-    "https://images.unsplash.com/photo-1692997075181-c76b9379f0a1?ixid=M3w0OTYzNDR8MHwxfHJhbmRvbXx8fHx8fHx8fDE2OTM1NDQ4Mzd8&ixlib=rb-4.0.3"
-  );
+  const [img, setImg] = useState("");
   useEffect(() => {
     const getImg = async () => {
       let response = await fetch(
@@ -17,7 +15,7 @@ const Home = () => {
       setImg(response.urls?.full);
       console.log(response);
     };
-    // getImg();
+    getImg();
   }, []);
   return (
     <div

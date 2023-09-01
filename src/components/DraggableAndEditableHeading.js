@@ -18,7 +18,12 @@ const DraggableAndEditableHeading = () => {
   return (
     <Draggable>
       <h1
-        style={{ cursor: "move" }}
+        style={{
+          cursor: "move",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+        }}
         onDoubleClick={handleDoubleClick}
         onBlur={handleBlur}
         contentEditable={isEditing}
